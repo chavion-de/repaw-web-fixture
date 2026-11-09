@@ -1,0 +1,17 @@
+{
+  "name": "Repaw Web Regression Fixture",
+  "variants": {
+    "good": {
+      "query": "?variant=good",
+      "expected": "Cart count, cart quantity, total, and confirmation all update correctly."
+    },
+    "broken": {
+      "query": "?variant=broken",
+      "expected": "The cart stores the item but the visible and accessible cart count remains zero."
+    },
+    "jserror": {
+      "query": "?variant=jserror",
+      "expected": "Opening the cart throws an uncaught TypeError for automatic error detection."
+    }
+  }
+}

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Repaw Regression Fixture</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./?variant=good" aria-label="Repaw fixture home">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>Repaw Fixture</span>
+      </a>
+      <span id="variant-pill" class="variant-pill">Loading fixture…</span>
+    </header>
+
+    <main class="shell">
+      <section id="catalog-view" aria-labelledby="catalog-title">
+        <div class="hero">
+          <p class="eyebrow">Deterministic test shop</p>
+          <h1 id="catalog-title">Small cart. Clear signals.</h1>
+          <p class="hero-copy">
+            A deliberately tiny storefront for testing Repaw's browser control,
+            functional assertions, responsive layout, and JavaScript error capture.
+          </p>
+        </div>
+
+        <div class="layout">
+          <article class="product-card" data-testid="product-paw-balm">
+            <div class="product-art" aria-hidden="true">
+              <span>🐾</span>
+            </div>
+            <div class="product-content">
+              <p class="eyebrow">Everyday care</p>
+              <h2>Paw Balm</h2>
+              <p class="description">A fixed product with a fixed price for reproducible runs.</p>
+              <div class="product-footer">
+                <strong class="price">€12.00</strong>
+                <button id="add-button" class="button button-primary" type="button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <aside class="cart-summary" aria-labelledby="summary-title">
+            <div>
+              <p class="eyebrow">Current session</p>
+              <h2 id="summary-title">Your cart</h2>
+            </div>
+            <div class="count-row">
+              <span>Items</span>
+              <span id="cart-badge" class="badge" aria-label="Cart item count 0" data-testid="cart-count">0</span>
+            </div>
+            <button id="open-cart-button" class="button button-secondary" type="button">
+              Open cart
+            </button>
+          </aside>
+        </div>
+      </section>
+
+      <section id="cart-view" class="cart-view" aria-labelledby="cart-title" hidden>
+        <button id="back-button" class="back-button" type="button">← Back to catalog</button>
+        <div class="cart-panel">
+          <p class="eyebrow">Order summary</p>
+          <h1 id="cart-title">Your cart</h1>
+          <p id="empty-message" class="empty-message">Your cart is empty.</p>
+          <div id="cart-line" class="cart-line" hidden>
+            <div>
+              <strong>Paw Balm</strong>
+              <p>Quantity: <span id="cart-quantity" data-testid="cart-quantity">0</span></p>
+            </div>
+            <strong id="cart-total" data-testid="cart-total">€0.00</strong>
+          </div>
+          <button id="checkout-button" class="button button-primary button-wide" type="button" disabled>
+            Complete test order
+          </button>
+          <p id="confirmation" class="confirmation" role="status" hidden>
+            Test order confirmed. No payment was taken.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span id="version-label">Fixture version</span>
+      <nav aria-label="Fixture variants">
+        <a href="./?variant=good">Good</a>
+        <a href="./?variant=broken">Broken</a>
+        <a href="./?variant=jserror">JS error</a>
+      </nav>
+    </footer>
+  </body>
+</html>
