@@ -7,13 +7,11 @@ It follows the minimal-reproduction idea: one product, one journey, and defects 
 
 After GitHub Pages is enabled, use these as URL builds in a Repaw **Web** project:
 
-| Variant | URL suffix | Expected result |
+| Variant | Public URL | Expected result |
 | --- | --- | --- |
-| Good | `?variant=good` | Cart count, quantity, €12.00 total, and confirmation work. |
-| Broken | `?variant=broken` | The item is stored, but the visible and accessible cart count stays at `0`. |
-| JavaScript error | `?variant=jserror` | Opening the cart throws an uncaught `TypeError`. |
-
-The repository's GitHub Pages URL is shown in the repository **Deployments** section.
+| Good | [Open good build](https://chavion-de.github.io/repaw-web-fixture/?variant=good) | Cart count, quantity, €12.00 total, and confirmation work. |
+| Broken | [Open broken build](https://chavion-de.github.io/repaw-web-fixture/?variant=broken) | The item is stored, but the visible and accessible cart count stays at `0`. |
+| JavaScript error | [Open JS-error build](https://chavion-de.github.io/repaw-web-fixture/?variant=jserror) | Opening the cart throws an uncaught `TypeError`. |
 
 ## Recommended Repaw run
 
